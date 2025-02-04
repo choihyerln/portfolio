@@ -1,11 +1,13 @@
+@import "tailwindcss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,12 +16,13 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-family: DiatypeVariable;
   text-decoration: inherit;
+  color: rgba(0, 0, 0, 1);
 }
+
 a:hover {
-  color: #535bf2;
+  color: rgba(239, 0, 0, 0.98);
 }
 
 body {
@@ -31,8 +34,29 @@ body {
 }
 
 h1 {
+  font-family: DiatypeExpanded;
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 400;
+  margin: 0;
+  font-size: 9.2rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 0em;
+  /* font-variation-settings: "slnt" 0, "MONO" 0; */
+}
+
+p {
+  font-family: DiatypeVariable;
+}
+
+hr {
+  background: rgba(0, 0, 0, 0.85);
+  border: 0;
+  height: 0.5rem;
+  display: block;
+  margin-top: -0.1rem;
+  margin-bottom: 0.7rem;
 }
 
 button {
@@ -56,13 +80,40 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  a {
+    color: rgba(0, 0, 0, 1);
   }
   a:hover {
-    color: #747bff;
+    color: rgba(239, 0, 0, 0.98);
   }
   button {
     background-color: #f9f9f9;
   }
+}
+
+@font-face {
+  font-family: "DiatypeExtended";
+  src: url("/fonts/ABCDiatypeExtended-Light-Trial.otf");
+}
+
+@font-face {
+  font-family: "DiatypeExpanded";
+  src: url("/fonts/ABCDiatypeExpanded-Light-Trial.otf");
+}
+
+@font-face {
+  font-family: "DiatypeVariable";
+  src: url("/fonts/ABCDiatypeVariable-Trial.ttf");
+}
+
+@font-face {
+  font-family: "DiatypeMono";
+  src: url("/fonts/ABCDiatypeMono-Regular-Trial.otf");
+}
+
+@theme {
+  --shadow-3xl: 10px 10px 25px rgba(0, 0, 0, 0.4);
 }
