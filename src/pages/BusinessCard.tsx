@@ -24,7 +24,7 @@ export default function BusinessCard() {
         <div className="w-108 h-64 bg-[url(/assets/images/main/businessCard.png)] bg-cover pl-10 pr-24 py-14 flex justify-between items-end uppercase">
           <p className="text-xl">Go to → → →</p>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <p className="text-2xl italic cursor-pointer text-red-500/98 border-b-1" onClick={handleClick}>
+            <p className="text-2xl italic cursor-pointer text-red-500/98 border-b" onClick={handleClick}>
               Portfolio
             </p>
           </motion.div>
