@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* 커스텀 폰트 등록 */
+@font-face {
+  font-family: "DiatypeVariable";
+  src: url("/fonts/ABCDiatypeVariable-Trial.ttf");
+}
+
+@font-face {
+  font-family: "DiatypeExtended";
+  src: url("/fonts/ABCDiatypeExtended-Regular-Trial.otf");
+}
+
+@font-face {
+  font-family: "DiatypeMono";
+  src: url("/fonts/ABCDiatypeMono-Regular-Trial.otf");
+}
+
+@font-face {
+  font-family: "FavoritVariable";
+  src: url("/fonts/ABCFavoritVariable-Trial.woff");
+}
+
+/* 유틸리티 클래스 정의 */
+@layer utilities {
+  .font-diatype-variable {
+    font-family: "DiatypeVariable", sans-serif;
+  }
+
+  .font-diatype-extended {
+    font-family: "DiatypeExtended", sans-serif;
+  }
+
+  .font-diatype-mono {
+    font-family: "DiatypeMono", sans-serif;
+  }
+
+  .font-favorit-variable {
+    font-family: "FavoritVariable", sans-serif;
+  }
+}
+
+/* 전역 기본 스타일 정의 */
+@layer base {
+  :root {
+    font-family: DiatypeVariable, sans-serif;
+    color-scheme: light dark;
+    color: #000;
+    background-color: #fff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+
+  a:hover {
+    color: rgba(239, 0, 0, 0.98);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+}
