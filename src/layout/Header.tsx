@@ -79,7 +79,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-50 w-full backdrop-blur-lg border-b border-[#e5e5e5]">
-      <nav className="max-w-7xl px-6">
+      <nav className="max-w-7xl px-6 mx-auto">
         <div className="flex justify-between items-center h-16">
           {/* 루트 영역 */}
           <div className="flex items-center">
